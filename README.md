@@ -1,0 +1,77 @@
+# Tarea6_SXE
+Tarea 6 en Windows
+
+Primero instalamos docker en Windows
+
+Depsués creamos una carpeta con el nombre de Tarea6 para localizar todo ahí
+
+mkdir Tarea06
+
+Creamos un archivo de docker compose, un archivo del tipo .yml 
+
+ echo $null > docker-compose.yml
+
+ Y editamos ese archivo con notepad
+
+ ![image](https://github.com/user-attachments/assets/909e076a-5c1e-4478-9d19-7869a45743e5)
+
+ Añadimos este contenido 
+
+ services:
+  mysql:
+    container_name: some-mysql
+    image: mysql:5.7
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: prestashop
+    networks:
+      - prestashop_network
+  prestashop:
+    container_name: prestashop
+    image: prestashop/prestashop:latest .
+    restart: unless-stopped
+    depends_on:
+      - mysql
+    ports:
+      - 8080:80
+    environment:
+      DB_SERVER: some-mysql
+      DB_NAME: prestashop
+      DB_USER: root
+      DB_PASSWD: admin
+    networks:
+      - prestashop_network
+networks:
+    prestashop_network:
+
+    Guardamos el archivo y ejecutamos el archivo docker-compose
+
+    docker-compose up -d
+
+    ![image](https://github.com/user-attachments/assets/05e65966-42c7-42ad-83d8-837d1a57618e)
+
+    ![image](https://github.com/user-attachments/assets/9cc86618-4471-40c6-9b49-407debb0699f)
+
+  
+
+    Podemos comprobar si se han ejecutado los contenedores con el comando 
+
+docker ps
+
+![image](https://github.com/user-attachments/assets/f05881e5-b958-48b7-8642-01b8a1181317)
+
+Ahora como no estamos dentro de la maquina virtual podemos utilizar local host pero en el caso qeu quisieramos saber la ip en windows podriamos utilizar
+
+ipconfig
+
+Pero como estamos utilizando el odernador basta con http://localhost:8080/
+
+![image](https://github.com/user-attachments/assets/d4e6c375-e346-4d27-ba8c-c0cb8cd0ab30)
+
+Ahora conectamos la base de datos sql con la informacion que hemos colocado en el archivo .yml 
+
+![Uploading image.png…]()
+
+
+    
