@@ -71,7 +71,22 @@ Pero como estamos utilizando el odernador basta con http://localhost:8080/
 
 Ahora conectamos la base de datos sql con la informacion que hemos colocado en el archivo .yml 
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/d01e9d2c-a583-4f97-a2ef-71fa9fe3d57f)
+
+Dejamos que cargue la información, al acabar de cargar nos aparecerá esto: 
+
+![image](https://github.com/user-attachments/assets/172fc0d1-043c-45fc-9d1c-72d38d5db39e)
+
+Podemos entrar en nuestra interfaz de usuario
+
+![image](https://github.com/user-attachments/assets/896c2685-11a3-4570-80e2-a9fe9e2c3ac5)
+
+
+Ahora podemos entrar en la interfazdeadministración pero nos da este error
+
+![image](https://github.com/user-attachments/assets/322f97b9-6c2c-4bef-b990-ed056a7d38ca)
+
+
 
 
     
