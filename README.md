@@ -6,7 +6,7 @@ Primero instalamos docker en Windows
 Depsués creamos una carpeta con el nombre de Tarea6 para localizar todo ahí
  ```bash
 mkdir Tarea06
- ```bash
+bash```
 Creamos un archivo de docker compose, un archivo del tipo .yml 
  ```bash
  echo $null > docker-compose.yml
