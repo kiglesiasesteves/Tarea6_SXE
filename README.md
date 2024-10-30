@@ -16,7 +16,7 @@ Creamos un archivo de docker compose, un archivo del tipo .yml
  ![image](https://github.com/user-attachments/assets/909e076a-5c1e-4478-9d19-7869a45743e5)
 
  Añadimos este contenido 
-```
+ ```
  services:
   mysql:
     container_name: some-mysql
@@ -44,21 +44,18 @@ Creamos un archivo de docker compose, un archivo del tipo .yml
       - prestashop_network
 networks:
     prestashop_network:
-```
-    Guardamos el archivo y ejecutamos el archivo docker-compose
+ ```
+  
+Guardamos el archivo y ejecutamos el archivo docker-compose
+
  ```
     docker-compose up -d
 ```
-    ![image](https://github.com/user-attachments/assets/05e65966-42c7-42ad-83d8-837d1a57618e)
-
-    ![image](https://github.com/user-attachments/assets/9cc86618-4471-40c6-9b49-407debb0699f)
-
   
-
     Podemos comprobar si se han ejecutado los contenedores con el comando 
- ```
+ 
 docker ps
- ```
+ 
 ![image](https://github.com/user-attachments/assets/f05881e5-b958-48b7-8642-01b8a1181317)
 
 Ahora como no estamos dentro de la maquina virtual podemos utilizar local host pero en el caso qeu quisieramos saber la ip en windows podriamos utilizar
