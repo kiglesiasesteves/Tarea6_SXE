@@ -53,9 +53,9 @@ Guardamos el archivo y ejecutamos el archivo docker-compose
 ```
   
     Podemos comprobar si se han ejecutado los contenedores con el comando 
- 
+ ```
 docker ps
- 
+ ```
 ![image](https://github.com/user-attachments/assets/f05881e5-b958-48b7-8642-01b8a1181317)
 
 Ahora como no estamos dentro de la maquina virtual podemos utilizar local host pero en el caso qeu quisieramos saber la ip en windows podriamos utilizar
